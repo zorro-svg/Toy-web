@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Send feedback to Toy Haven, read delivery information and find answers to common questions.">
+    <meta name="theme-color" content="#7b2cbf">
+
+    <title>Toy Haven - Support</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+</head>
+
+<body>
+
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Header + Navigation -->
+    <header>
+
+        <nav class="navbar" aria-label="Main navigation">
+
+            <a href="index.html" class="logo">🧸 Toy Haven</a>
+
+            <button class="menu-button" id="menuButton"
+                aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="wishlist.html">Collection <span id="collectionCount">0</span></a></li>
+                <li><a href="cart.html">Cart 🛒 <span id="cartCount">0</span></a></li>
+                <li><a href="support.html" aria-current="page">Support</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main id="main">
+
+        <section class="page-banner">
+
+            <h1>Feedback &amp; Support 💬</h1>
+
+            <p>We would love to hear from you!</p>
+
+        </section>
+
+        <div class="support-container">
+
+            <!-- Feedback Form -->
+            <form id="feedbackForm" class="form-card" novalidate>
+
+                <h2>Send Us Feedback</h2>
+
+                <label for="feedbackName">Name</label>
+                <input type="text" id="feedbackName" required autocomplete="name">
+
+                <label for="feedbackEmail">Email</label>
+                <input type="email" id="feedbackEmail" required autocomplete="email">
+
+                <label for="feedbackMessage">Message</label>
+                <textarea id="feedbackMessage" rows="6" required></textarea>
+
+                <button type="submit" class="button">Send Feedback</button>
+
+                <p id="feedbackSuccess" class="form-message" role="status"></p>
+
+            </form>
+
+
+            <!-- Delivery information table -->
+            <section class="form-card">
+
+                <h2>Delivery Information 🚚</h2>
+
+                <div class="table-wrapper">
+
+                    <table class="info-table">
+
+                        <caption class="sr-only">Delivery fees and times</caption>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Order value</th>
+                                <th scope="col">Delivery fee</th>
+                                <th scope="col">Delivery time</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Rs. 10,000 or less</td>
+                                <td>Rs. 500</td>
+                                <td>3 - 5 working days</td>
+                            </tr>
+                            <tr>
+                                <td>Over Rs. 10,000</td>
+                                <td>Free</td>
+                                <td>3 - 5 working days</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- FAQ -->
+            <section class="faq">
+
+                <h2>Frequently Asked Questions ❓</h2>
+
+                <div class="faq-item">
+
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq1">
+                        How can I place an order?
+                        <span aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer" id="faq1">
+                        <p>Choose a product, add it to your cart, and complete the checkout form.</p>
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq2">
+                        Can I save products?
+                        <span aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer" id="faq2">
+                        <p>Yes. You can add products to your Collection (wishlist) and mark them as Interested, Owned or Not Interested.</p>
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq3">
+                        What payment methods are available?
+                        <span aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer" id="faq3">
+                        <p>You can choose Card or Cash on Delivery.</p>
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq4">
+                        Can I clear my cart?
+                        <span aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer" id="faq4">
+                        <p>Yes. Use the Clear Cart button on the shopping cart page.</p>
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq5">
+                        Is delivery free?
+                        <span aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer" id="faq5">
+                        <p>Delivery is free for orders over Rs. 10,000. Smaller orders have a delivery fee of Rs. 500.</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <div>
+            <h2>🧸 Toy Haven</h2>
+            <p>Your fun place for toys and collectibles.</p>
+        </div>
+
+        <div>
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="wishlist.html">Collection</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:hello@toyhaven.com">hello@toyhaven.com</a></p>
+            <p>Colombo, Sri Lanka</p>
+        </div>
+
+        <div class="footer-newsletter">
+            <h2>📩 Newsletter</h2>
+            <p>Get updates about new toys and special offers.</p>
+
+            <form id="newsletterForm" novalidate>
+
+                <label for="newsletterEmail" class="sr-only">Email address</label>
+
+                <input type="email" id="newsletterEmail"
+                    placeholder="Enter your email" autocomplete="email">
+
+                <button type="submit" class="button">Subscribe</button>
+
+            </form>
+
+            <p id="newsletterMessage" role="status"></p>
+        </div>
+
+    </footer>
+
+
+    <div id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
